@@ -1,0 +1,182 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --color-mzc-plum: #624150;
+  --color-mzc-plum-light: #8a5e71;
+  --color-mzc-teal: #669199;
+  --color-mzc-plum-hover: #4a313d;
+  --color-mzc-pink: #fbceca;
+}
+
+:root {
+  --mzc-plum: #624150;
+  --mzc-plum-light: #8a5e71;
+  --mzc-plum-hover: #4a313d;
+  --mzc-teal: #669199;
+  --mzc-pink: #fbceca;
+  --brand-plum: #624150;
+  --brand-plum-light: #8a5e71;
+  --brand-plum-hover: #4a313d;
+  --brand-teal: #669199;
+  --brand-pink: #fbceca;
+}
+
+/* Original MZC Storefront Card Styling */
+.mzc-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.mzc-card-img-wrap {
+  width: 100%;
+  aspect-ratio: 1;
+  position: relative;
+  overflow: hidden;
+  background: #F9F9F9;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+}
+
+.mzc-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.35s ease;
+}
+
+.mzc-card-img-secondary {
+  opacity: 0;
+}
+
+.mzc-card-img-wrap:hover .mzc-card-img-secondary {
+  opacity: 1;
+}
+
+.mzc-card-brand {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--mzc-teal);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.mzc-card-title {
+  font-size: 0.76rem;
+  font-weight: 400;
+  color: var(--mzc-plum);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: calc(1.35em * 2);
+}
+
+.mzc-card-size {
+  font-size: 0.64rem;
+  font-weight: 500;
+  color: var(--mzc-teal);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  flex-grow: 1;
+}
+
+.mzc-card-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: auto;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+}
+
+.mzc-card-price {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--mzc-plum);
+}
+
+.mzc-card-add-btn {
+  background: transparent;
+  border: none;
+  color: var(--mzc-plum);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  cursor: pointer;
+  transition: transform 0.15s ease, color 0.15s ease;
+  border-radius: 9999px;
+}
+
+.mzc-card-add-btn:hover {
+  color: var(--mzc-plum-hover);
+  transform: scale(1.15);
+}
+
+.mzc-quick-view-tab {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.45);
+  padding: 5px 14px;
+  border-radius: 0 !important;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 3;
+  white-space: nowrap;
+  mix-blend-mode: screen;
+  pointer-events: auto;
+  border: none;
+  cursor: pointer;
+}
+
+.mzc-quick-view-text {
+  font-size: 0.60rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #000000;
+  mix-blend-mode: destination-out;
+  display: block;
+  user-select: none;
+}
+
+.mzc-card-img-wrap:hover .mzc-quick-view-tab {
+  opacity: 1;
+}
+
+.mzc-sold-out-tag {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  color: var(--mzc-plum);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2px 8px;
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  z-index: 3;
+  pointer-events: none;
+  border-radius: 0;
+}
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #ffffff;
+  color: #2e282a;
+}

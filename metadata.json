@@ -1,0 +1,6 @@
+{
+  "name": "Mad Zoggs Cubs Thrift (MZC) Storefront",
+  "description": "Standalone storefront shell for Mad Zoggs Cubs Thrift children's boutique thrift store, featuring Shop and Drop Spot experiences.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
